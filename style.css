@@ -1,0 +1,484 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #ffcdf8;
+  line-height: 1.6;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+  border-radius: 20px;
+  background-color: transparent;
+  filter: drop-shadow(0 0 6px rgba(255, 200, 220, 0.5));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(255, 170, 200, 0.7));
+}
+
+.logo-container h1 {
+  font-size: 2em;
+  color: #c63f67;
+  margin: 10px 0 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo-container p {
+  color: #835d47;
+  font-style: italic;
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+nav {
+  text-align: center;
+  background-color: #ffdde1;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .btn {
+  text-decoration: none;
+  color: #5a2a27;
+  margin: 0 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .btn:hover {
+  color: #c63f67;
+  transform: scale(1.1);
+}
+
+/* Encabezado */
+header {
+  background-color: #f4c2c2;
+  padding: 40px 20px;
+  text-align: center;
+  color: #5a2a27;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  color: #ff7083;
+  margin-bottom: 15px;
+}
+
+section p {
+  color: #835d47;
+  font-size: 1.1em;
+}
+
+/* Galería */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.gallery img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  background-color: #f4c2c2;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  color: #5a2a27;
+  margin-top: 40px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #5a2a27;
+  line-height: 1.6;
+}
+
+/* Navegación */
+nav {
+  text-align: center;
+  background-color: #ffdde1;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav .btn {
+  text-decoration: none;
+  color: #5a2a27;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav .btn:hover {
+  color: #c63f67;
+  transform: scale(1.1);
+}
+
+/* Encabezado */
+header {
+  background-color: #f4c2c2;
+  padding: 40px 20px;
+  text-align: center;
+  color: #5a2a27;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.producto h3 {
+  margin: 15px 0 5px;
+  color: #c63f67;
+}
+
+.producto p {
+  font-size: 0.95em;
+  color: #5a2a27;
+}
+
+.precio {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #c63f67;
+  font-size: 1.1em;
+}
+
+/* Botones */
+.btn-compra {
+  background-color: #f4c2c2;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #5a2a27;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-compra:hover {
+  background-color: #ffc8dd;
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  background-color: #f4c2c2;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95em;
+  color: #5a2a27;
+  margin-top: 40px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .producto img {
+    height: 180px;
+  }
+}
+
+#contacto {
+  background: rgba(0,0,0,0.5); 
+  padding: 40px 25px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#contacto h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffb400;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+#contacto p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #ffe066;
+}
+
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contacto label {
+  font-weight: 500;
+  color: #ffe066;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#contacto input[type="submit"] {
+  background: #ffb400;
+  color: #1a1a1a;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contacto input[type="submit"]:hover {
+  background: #ffe066;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+#contacto li a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background: #ffb400;
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#contacto li a:hover {
+  background: #ffe066;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.reseñas {
+  background-color: #f7eaff; /* morado pastel suave */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.reseñas h2 {
+  color: #7a4aa8; /* tono morado más fuerte */
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.reseñas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reseña {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reseña:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.comentario {
+  font-style: italic;
+  color: #4a3b64;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.cliente {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #7a4aa8;
+}
+.contact-info, .formulario {
+  background-color: #F7F1FF;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(120, 90, 160, 0.2);
+  text-align: center;
+}
+
+.contact-info a {
+  color: #d3cc70;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.redes a {
+  display: inline-block;
+  margin: 0 10px;
+  background-color: #ffb3c0;
+  color: #4A3B6B;
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.redes a:hover {
+  background-color: #B48EFF;
+}
+

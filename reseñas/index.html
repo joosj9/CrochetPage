@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reseñas | Creaciones Crochet JG</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+     <nav>
+    <a href="../index.html" class="btn">Regresar a inicio</a>
+  </nav>
+  <header>
+    <h1>✨ Reseñas de Creaciones Crochet JG ✨</h1>
+    <p>Opiniones sinceras de nuestros clientes</p>
+    <div class="logo-container">
+    <img src="../img/logo.png" alt="Logo Creaciones JG" class="logo">
+  </header>
+
+
+  <main>
+    <section class="reseñas">
+      <article class="tarjeta">
+        <h3>María López</h3>
+        <p class="comentario">“Encargué un amigurumi y quedó precioso, con muchos detalles. Se nota el amor con que está hecho.”</p>
+        <span class="estrellas">★★★★★</span>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Ana Torres</h3>
+        <p class="comentario">“La atención fue excelente, y el empaque estaba divino. ¡Recomendadísimo!”</p>
+        <span class="estrellas">★★★★★</span>
+      </article>
+
+      <article class="tarjeta">
+        <h3>Carlos Gómez</h3>
+        <p class="comentario">“Le regalé un llavero tejido a mi novia y le encantó. Todo muy bien hecho.”</p>
+        <span class="estrellas">★★★★☆</span>
+      </article>
+    </section>
+
+    <section class="formulario">
+      <h2>💬 Deja tu reseña</h2>
+      <form id="reseñaForm">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="mensaje">Tu opinión</label>
+        <textarea id="mensaje" rows="4" placeholder="Cuéntanos tu experiencia..." required></textarea>
+
+        <label for="estrellas">Puntuación</label>
+        <select id="estrellas">
+          <option>★★★★★</option>
+          <option>★★★★☆</option>
+          <option>★★★☆☆</option>
+          <option>★★☆☆☆</option>
+          <option>★☆☆☆☆</option>
+        </select>
+
+        <button type="submit">Enviar reseña</button>
+      </form>
+      <p id="mensajeExito" class="oculto">✅ ¡Reseña enviada con éxito!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Creaciones Crochet JG | Hecho con amor y crochet 🧶</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('reseñaForm');
+    const mensaje = document.getElementById('mensajeExito');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      mensaje.classList.remove('oculto');
+      form.reset();
+      setTimeout(() => mensaje.classList.add('oculto'), 3000);
+    });
+  </script>
+</body>
+</html>
