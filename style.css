@@ -481,4 +481,168 @@ footer {
 .redes a:hover {
   background-color: #B48EFF;
 }
+.about {
+  background-color: #fff8f0;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
 
+.about h2 {
+  color: #c63f67;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  position: relative;
+  background-color: #ffdde1;
+  border-radius: 25px;
+  width: 380px;
+  height: 300px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+  animation: fadeInUp 1s ease;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(135deg, #ffe6ec, #fff0f7);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 420px;
+  min-height: 350px;
+  text-align: center;
+  color: #5a2a27;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  overflow: hidden;
+}
+
+/.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;      /* Espacio entre columnas */
+  margin: 60px auto;
+  flex-wrap: wrap; /* Se apilan solo en pantallas pequeñas */
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(135deg, #ffe6ec, #fff0f7);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 420px;      /* Ancho de cada tarjeta */
+  min-height: 350px; /* Alto de cada tarjeta */
+  text-align: center;
+  color: #5a2a27;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  overflow: hidden;
+}
+.about {
+  padding: 60px 20px;
+  background-color: #fff8f0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;   /* Centra las columnas */
+  gap: 50px;                 /* Espacio entre tarjetas */
+  flex-wrap: nowrap;          /* Evita que se apilen */
+  max-width: 900px;           /* Controla el ancho máximo */
+  margin: 0 auto;             /* Centra el contenedor */
+}
+
+.card {
+  position: relative;
+  background: linear-gradient(135deg, #ffe6ec, #fff0f7);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  width: 420px;       /* Ancho de cada tarjeta */
+  min-height: 350px;  /* Alto de cada tarjeta */
+  text-align: center;
+  color: #5a2a27;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  overflow: hidden;
+}
+
+/* Brillo animado */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255, 192, 203, 0.3) 50%,
+    rgba(255,255,255,0.2) 100%
+  );
+  transform: rotate(0deg);
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: shineMove 1.5s linear;
+}
+
+@keyframes shineMove {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* Hover: cambio de color y elevación */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #ffd6e0, #ffe6f0);
+}
+
+.card h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #7a4aa8;
+}
+
+.card p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #5a2a27;
+}
+
+/* Responsivo: se apilan solo en pantallas muy pequeñas */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 90%;
+    min-height: auto;
+  }
+}
